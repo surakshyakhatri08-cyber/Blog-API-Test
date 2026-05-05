@@ -1,0 +1,46 @@
+[
+  {
+    "id": 2,
+    "first_name": "Bhim",
+    "last_name": "Bahadur",
+    "age": 23,
+    "email": "bhim@example.com",
+    "phone": "9811111111",
+    "date_of_birth": "2002-05-15",
+    "gender": "male",
+    "description": "Full-stack developer working with FastAPI."
+  },
+  {
+    "id": 3,
+    "first_name": "Kalpana",
+    "last_name": "Chettri",
+    "age": 22,
+    "email": "kalpana@example.com",
+    "phone": "9800000000",
+    "date_of_birth": "2001-01-01",
+    "gender": "female",
+    "description": "BCA 6th Semester student at NCMT."
+  },
+  {
+    "id": 4,
+    "first_name": "Prabin",
+    "last_name": "Basnet",
+    "age": 19,
+    "email": "prabin@example.com",
+    "phone": "9811100011",
+    "date_of_birth": "2004-03-25",
+    "gender": "male",
+    "description": "Backend Developer"
+  },
+  {
+    "id": 5,
+    "first_name": "Surakshya",
+    "last_name": "Khatri",
+    "age": 21,
+    "email": "surakshya@example.com",
+    "phone": "9800000000",
+    "date_of_birth": "2004-01-01",
+    "gender": "female",
+    "description": "UI/UX Designer"
+  }
+]
