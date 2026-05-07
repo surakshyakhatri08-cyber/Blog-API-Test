@@ -1,16 +1,10 @@
 from fastapi import FastAPI
-from app.features.users.route import router as user_router
+from fastapi.responses import RedirectResponse
 
-app = FastAPI(
-    title="NCMT API",
-    description="Assignment: User Management System using db.json",
-    version="1.0.0"
-)
-@app.get("/", tags=["General"])
+from app.features.blogs.route import router as blog_router
+app = FastAPI()
+
+@app.get('/')
 async def root():
-    return {
-        "status": "Online",
-        "message": "Welcome to NCMT API - User Management System"
-    }
-
-app.include_router(user_router, prefix="/users", tags=["Users"])
+    return RedirectResponse(url='/docs')
+app.include_router(blog_router)

@@ -1,17 +1,19 @@
+import uuid
 from datetime import datetime
-from sqlalchemy import String, Boolean, DateTime
+from sqlalchemy import String, Text, Boolean, DateTime, text
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
 from app.db.base import Base
 
 
-class Todo(Base):
-    __tablename__ = "todos"
+class Blog(Base):
+    __tablename__ = "blogs"
 
-    id: Mapped[int] = mapped_column(
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True),
         primary_key=True,
-        autoincrement=True,
-        index=True
+        server_default=text("gen_random_uuid()")
     )
 
     title: Mapped[str] = mapped_column(
@@ -19,12 +21,12 @@ class Todo(Base):
         nullable=False
     )
 
-    description: Mapped[str] = mapped_column(
-        String,
+    content: Mapped[str] = mapped_column(
+        Text,
         nullable=False
     )
 
-    is_completed: Mapped[bool] = mapped_column(
+    is_published: Mapped[bool] = mapped_column(
         Boolean,
         default=False
     )

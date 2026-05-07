@@ -42,5 +42,16 @@
     "date_of_birth": "2004-01-01",
     "gender": "female",
     "description": "UI/UX Designer"
+  },
+  {
+    "id": 99,
+    "first_name": "Suki",
+    "last_name": "KC",
+    "age": 20,
+    "email": "surakshya12@example.com",
+    "phone": "9800000450",
+    "date_of_birth": "2005-01-01",
+    "gender": "female",
+    "description": "UI/UX Designer"
   }
 ]

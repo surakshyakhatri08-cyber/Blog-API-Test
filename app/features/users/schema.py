@@ -1,11 +1,11 @@
 from pydantic import BaseModel, EmailStr
-from enum import Enum
+from enum import StrEnum, auto
 from typing import Optional
 
-class Gender(str, Enum):
-    male = "male"
-    female = "female"
-    other = "other"
+class Gender(StrEnum):
+    MALE = auto()
+    FEMALE = auto()
+    OTHER = auto()
 
 class CreateUserRequest(BaseModel):
     first_name: str
@@ -26,3 +26,8 @@ class UpdateUserRequest(BaseModel):
     date_of_birth: Optional[str] = None
     gender: Optional[Gender] = None
     description: Optional[str] = None
+
+class UserResponse(CreateUserRequest):
+    id: int
+    class Config:
+        from_attributes = True
